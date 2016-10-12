@@ -55,7 +55,8 @@ class Header extends React.Component {
         justifyContent: 'center'
       },
       children: {
-        marginTop: this.props.maxHeight,
+        paddingTop: this.props.maxHeight,
+        backgroundColor: this.props.childrenBackgroundColor
       }
     });
     return (
@@ -98,13 +99,15 @@ Header.propTypes = {
   children: React.PropTypes.node || React.PropTypes.nodes,
   headerChildren: React.PropTypes.node || React.PropTypes.nodes,
   stickyHeaderChildren: React.PropTypes.node || React.PropTypes.nodes,
+  childrenBackgroundColor: React.PropTypes.string,
   onScroll: React.PropTypes.func
 };
 
 Header.defaultProps = {
   maxHeight: 125,
   minHeight: 80,
-  yScale: -35
+  yScale: -35,
+  childrenBackgroundColor: '#FFF'
 };
 
 export default Header;
