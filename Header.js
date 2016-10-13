@@ -3,7 +3,8 @@ import {
   Animated,
   ScrollView,
   StyleSheet,
-  View
+  View,
+  StatusBar
 } from 'react-native';
 
 class Header extends React.Component {
@@ -61,6 +62,7 @@ class Header extends React.Component {
     });
     return (
       <View style={styles.container}>
+        <StatusBar barStyle={this.props.statusBarTheme} />
         <ScrollView
           style={styles.container}
           scrollEventThrottle={16}
@@ -100,6 +102,7 @@ Header.propTypes = {
   headerChildren: React.PropTypes.node || React.PropTypes.nodes,
   stickyHeaderChildren: React.PropTypes.node || React.PropTypes.nodes,
   childrenBackgroundColor: React.PropTypes.string,
+  statusBarTheme: React.PropTypes.oneOf([ 'default', 'light-content' ]),
   onScroll: React.PropTypes.func
 };
 
@@ -107,7 +110,8 @@ Header.defaultProps = {
   maxHeight: 125,
   minHeight: 80,
   yScale: -35,
-  childrenBackgroundColor: '#FFF'
+  childrenBackgroundColor: '#FFF',
+  statusBarTheme: 'default'
 };
 
 export default Header;

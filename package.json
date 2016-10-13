@@ -8,6 +8,10 @@
     "scroll"
   ],
   "main": "Header.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ajackster/react-native-image-header"
+  },
   "author": "ajackster",
   "license": "ISC",
   "dependencies": {},
