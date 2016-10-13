@@ -101,10 +101,8 @@ Header.propTypes = {
   titleScale: React.PropTypes.number,
   children: React.PropTypes.node || React.PropTypes.nodes,
   headerChildren: React.PropTypes.node || React.PropTypes.nodes,
-  stickyHeaderChildren: React.PropTypes.node || React.PropTypes.nodes,
   childrenBackgroundColor: React.PropTypes.string,
-  statusBarTheme: React.PropTypes.oneOf([ 'default', 'light-content' ]),
-  onScroll: React.PropTypes.func
+  statusBarTheme: React.PropTypes.oneOf([ 'default', 'light-content' ])
 };
 
 Header.defaultProps = {
