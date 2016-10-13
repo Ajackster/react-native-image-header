@@ -23,12 +23,12 @@ class Header extends React.Component {
     });
     const titleScale = this.state.scrollY.interpolate({
       inputRange: [0, headerScrollDistance / 2, headerScrollDistance],
-      outputRange: [1, 1, 0.8],
+      outputRange: [1, 1, this.props.titleScale],
       extrapolate: 'clamp',
     });
     const titleTranslateY = this.state.scrollY.interpolate({
       inputRange: [0, headerScrollDistance / 2, headerScrollDistance],
-      outputRange: [0, 0, this.props.yScale],
+      outputRange: [0, 0, this.props.titleTranslateY],
       extrapolate: 'clamp',
     });
     const styles = StyleSheet.create({
@@ -97,7 +97,8 @@ Header.propTypes = {
   backgroundImage: React.PropTypes.number,
   maxHeight: React.PropTypes.number,
   minHeight: React.PropTypes.number,
-  yScale: React.PropTypes.number,
+  titleTranslateY: React.PropTypes.number,
+  titleScale: React.PropTypes.number,
   children: React.PropTypes.node || React.PropTypes.nodes,
   headerChildren: React.PropTypes.node || React.PropTypes.nodes,
   stickyHeaderChildren: React.PropTypes.node || React.PropTypes.nodes,
@@ -109,7 +110,8 @@ Header.propTypes = {
 Header.defaultProps = {
   maxHeight: 125,
   minHeight: 80,
-  yScale: -35,
+  titleTranslateY: -35,
+  titleScale: 0.8,
   childrenBackgroundColor: '#FFF',
   statusBarTheme: 'default'
 };
