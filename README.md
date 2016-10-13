@@ -17,7 +17,7 @@ import ImageHeader from 'react-native-image-header';
 `ImageHeader` component is the main component which wraps everything and provides a couple of props (see Config below).
 
 ### Example
-_The following Basic example can be found in `Example/Example.js`._
+_The following example can be found in `Example/Example.js`._
 
 ```js
 import React from 'react';
@@ -29,7 +29,7 @@ import {
   StyleSheet,
   TouchableOpacity
 } from 'react-native';
-import Header from '../Header';
+import ImageHeader from '../ImageHeader';
 
 const styles = StyleSheet.create({
   userImage: {
@@ -56,7 +56,7 @@ const donaldDuck = require('./donaldduck.png');
 
 const Example = () => {
   return (
-    <Header
+    <ImageHeader
       backgroundImage={backgroundImage}
       headerChildren={
         <View style={styles.foregroundContainer}>
@@ -80,14 +80,14 @@ const Example = () => {
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', height: 600 }}>
         <Text>Content</Text>
       </View>
-    </Header>
+    </ImageHeader>
   )
 };
 ```
 
 ### Configuration
 
-##### ActionButton:
+##### ImageHeader:
 | Property      | Type          | Default             | Description |
 | ------------- |:-------------:|:------------:       | ----------- |
 | backgroundImage | number      | null                | background image for the header

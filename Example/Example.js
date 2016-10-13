@@ -7,7 +7,7 @@ import {
   StyleSheet,
   TouchableOpacity
 } from 'react-native';
-import Header from '../Header';
+import ImageHeader from '../ImageHeader';
 
 const styles = StyleSheet.create({
   userImage: {
@@ -34,7 +34,7 @@ const donaldDuck = require('./donaldduck.png');
 
 const Example = () => {
   return (
-    <Header
+    <ImageHeader
       backgroundImage={backgroundImage}
       headerChildren={
         <View style={styles.foregroundContainer}>
@@ -58,7 +58,7 @@ const Example = () => {
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', height: 600 }}>
         <Text>Content</Text>
       </View>
-    </Header>
+    </ImageHeader>
   )
 };
 
