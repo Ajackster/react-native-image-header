@@ -1,6 +1,8 @@
 # react-native-image-header
 A cool scrollable header for react-native
 
+![react-native-circular-action-menu demo](http://i.giphy.com/46Ct8tegBZMZi.gif)
+
 ### Installation
 ```bash
 npm i react-native-image-header --save
